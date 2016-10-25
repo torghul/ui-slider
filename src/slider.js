@@ -204,6 +204,15 @@ angular.module('ui.slider', []).value('uiSliderConfig',{}).directive('uiSlider',
                         options[property] = attrs[property];
                     }
                 });
+				if(angular.isDefined(options['ticks'])) {
+					var min = parseInt(options['min']);
+					var max = parseInt(options['max']);
+					var ticks = options['ticks'];
+					angular.forEach(ticks, function(tick) {
+						var left = (tick - min) / (max - min) * 100 + '%';
+                        $("<div/>").addClass("ui-slider-tick").appendTo(element).css({left: left});
+					});
+				}
                 if (angular.isDefined(options['tick']) && angular.isDefined(options['step'])) {
                     var total = parseInt( (parseInt(options['max']) - parseInt(options['min'])) /parseInt(options['step']));
                     for (var i = total; i >= 0; i--) {

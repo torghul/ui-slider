@@ -188,7 +188,7 @@ app.factory('uiSliderConfig', function ($log) {
                     <div ui-slider data-min="0" data-max="20" data-step="5" data-tick ng-model="demoVals.sliderExample13"></div>
                 </div>
             </li>
-            <li>
+<!--            <li>
                 <div class="sliderExample"><a name="ex14"></a>
                     <strong>Slider with lower and upper bounds</strong>
                     <div ui-slider min="0" max="100" step="10" upper-bound="90" ng-model="demoVals.sliderExample14a">
@@ -212,7 +212,7 @@ app.factory('uiSliderConfig', function ($log) {
                     <input type="text" ng-model="demoVals.sliderExample15" />
                 </div>
             </li>
-            <li>
+-->            <li>
                 <div class="sliderExample"><a name="ex16"></a>
                     <strong>Slider with tip</strong>
                     <div ui-slider data-min="0" data-max="80" data-tip ng-model="demoVals.sliderExample16"></div>
@@ -225,7 +225,13 @@ app.factory('uiSliderConfig', function ($log) {
                     <input type="text" ng-model="demoVals.sliderExample17" />
                 </div>
             </li>
-
+            <li>
+                <div class="sliderExample"><a name="ex17"></a>
+                    <strong>Slider with ticks</strong>
+                    <div ui-slider="{ticks: [10, 25, 50, 75]}" min="0" max="100" ng-model="demoVals.sliderExample17"></div>
+                    <input type="text" ng-model="demoVals.sliderExample17" />
+                </div>
+            </li>
         </ol>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
